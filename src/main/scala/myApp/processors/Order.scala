@@ -10,6 +10,6 @@ case class Order(
   }
 
   def computeTaxes(taxRate: Double, billingAmount: Double): Double = {
-    return (taxRate * billingAmount).round()
+    return (taxRate * billingAmount).round
   }
 }
