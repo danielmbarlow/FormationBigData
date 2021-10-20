@@ -3,33 +3,33 @@ import org.apache.spark.sql.types.{DateType, DoubleType, IntegerType, StringType
 import org.apache.spark.sql.functions.{col, dayofmonth, lit, round, when}
 
 object SparkTraining {
-  val nullable = false
+  val NOT_NULLABLE = false
   val orderLineSchema: StructType = StructType {
     List(
-      StructField("OrderLine", IntegerType, nullable),
-      StructField("OrderId", IntegerType, nullable),
-      StructField("ProductId", IntegerType, nullable),
-      StructField("ShipDate", DateType, nullable),
-      StructField("BillDate", DateType, nullable),
-      StructField("UnitPrice", DoubleType, nullable),
-      StructField("NumUnits", IntegerType, nullable),
-      StructField("TotalPrice", DoubleType, nullable)
+      StructField("OrderLine", IntegerType, NOT_NULLABLE),
+      StructField("OrderId", IntegerType, NOT_NULLABLE),
+      StructField("ProductId", IntegerType, NOT_NULLABLE),
+      StructField("ShipDate", DateType, NOT_NULLABLE),
+      StructField("BillDate", DateType, NOT_NULLABLE),
+      StructField("UnitPrice", DoubleType, NOT_NULLABLE),
+      StructField("NumUnits", IntegerType, NOT_NULLABLE),
+      StructField("TotalPrice", DoubleType, NOT_NULLABLE)
     )
   }
 
   var orderSchema: StructType = StructType {
     List(
-      StructField("OrderId", IntegerType, nullable),
-      StructField("CustomerId", IntegerType, nullable),
-      StructField("CampaignId", IntegerType, nullable),
-      StructField("OrderDate", DateType, nullable),
-      StructField("City", StringType, nullable),
-      StructField("State", StringType, nullable),
-      StructField("ZipCode", StringType, nullable),
-      StructField("PaymentType", StringType, nullable),
-      StructField("TotalPrice", DoubleType, nullable),
-      StructField("NumOrderLines", IntegerType, nullable),
-      StructField("NumUnits", IntegerType, nullable)
+      StructField("OrderId", IntegerType, NOT_NULLABLE),
+      StructField("CustomerId", IntegerType, NOT_NULLABLE),
+      StructField("CampaignId", IntegerType, NOT_NULLABLE),
+      StructField("OrderDate", DateType, NOT_NULLABLE),
+      StructField("City", StringType, NOT_NULLABLE),
+      StructField("State", StringType, NOT_NULLABLE),
+      StructField("ZipCode", StringType, NOT_NULLABLE),
+      StructField("PaymentType", StringType, NOT_NULLABLE),
+      StructField("TotalPrice", DoubleType, NOT_NULLABLE),
+      StructField("NumOrderLines", IntegerType, NOT_NULLABLE),
+      StructField("NumUnits", IntegerType, NOT_NULLABLE)
     )
   }
 
